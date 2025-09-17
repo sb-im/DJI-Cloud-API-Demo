@@ -22,11 +22,11 @@ public enum OsdDeviceTypeEnum {
 
     RC(true, OsdRemoteControl.class, ChannelName.INBOUND_OSD_RC, GatewayTypeEnum.RC),
 
-    DOCK(true, OsdDock.class, ChannelName.INBOUND_OSD_DOCK, GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2),
+    DOCK(true, OsdDock.class, ChannelName.INBOUND_OSD_DOCK, GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4),
 
     RC_DRONE(false, OsdRcDrone.class, ChannelName.INBOUND_OSD_RC_DRONE, GatewayTypeEnum.RC),
 
-    DOCK_DRONE(false, OsdDockDrone.class, ChannelName.INBOUND_OSD_DOCK_DRONE, GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2);
+    DOCK_DRONE(false, OsdDockDrone.class, ChannelName.INBOUND_OSD_DOCK_DRONE, GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4);
 
     private final boolean gateway;
 

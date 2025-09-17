@@ -316,6 +316,32 @@ public class SDKDeviceService extends AbstractDeviceService {
     }
 
     @Override
+    public void dockLiveStatusUpdate(TopicStateRequest<DockLiveStatus> request, MessageHeaders headers) {
+        String from = request.getFrom();
+        DockLiveStatus liveStatus = request.getData();
+
+        // Check if the device is online
+        Optional<DeviceDTO> deviceOpt = deviceRedisService.getDeviceOnline(from);
+        if (deviceOpt.isEmpty()) {
+            log.warn("Device {} is not online, ignoring live status update", from);
+            return;
+        }
+
+        DeviceDTO device = deviceOpt.get();
+        if (!StringUtils.hasText(device.getWorkspaceId())) {
+            log.warn("Device {} has no workspace, ignoring live status update", from);
+            return;
+        }
+
+        // Log the live status update for debugging
+        log.debug("Received dock live status update from {}: {}", from, liveStatus);
+
+        // Push the live status update to web clients via WebSocket
+        // Note: We don't store this in Redis OSD cache to avoid conflicts with OsdDock data
+        deviceService.pushOsdDataToWeb(device.getWorkspaceId(), BizCodeEnum.DEVICE_OSD, from, liveStatus);
+    }
+
+    @Override
     public void rcControlSourceUpdate(TopicStateRequest<RcDroneControlSource> request, MessageHeaders headers) {
         // If the control source is empty, it will not be processed.
         if (ControlSourceEnum.UNKNOWN == request.getData().getControlSource()) {

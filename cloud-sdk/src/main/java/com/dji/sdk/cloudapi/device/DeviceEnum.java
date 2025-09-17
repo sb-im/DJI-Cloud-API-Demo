@@ -19,9 +19,9 @@ public enum DeviceEnum {
 
     M300(DeviceDomainEnum.DRONE, DeviceTypeEnum.M300, DeviceSubTypeEnum.ZERO),
 
-    M30(DeviceDomainEnum.DRONE, DeviceTypeEnum.M30_OR_M3T_CAMERA, DeviceSubTypeEnum.ZERO),
+    M30(DeviceDomainEnum.DRONE, DeviceTypeEnum.M30, DeviceSubTypeEnum.ZERO),
 
-    M30T(DeviceDomainEnum.DRONE, DeviceTypeEnum.M30_OR_M3T_CAMERA, DeviceSubTypeEnum.ONE),
+    M30T(DeviceDomainEnum.DRONE, DeviceTypeEnum.M30T, DeviceSubTypeEnum.ONE),
 
     M3E(DeviceDomainEnum.DRONE, DeviceTypeEnum.M3E, DeviceSubTypeEnum.ZERO),
 
@@ -55,7 +55,7 @@ public enum DeviceEnum {
 
     M3E_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M3E_CAMERA, DeviceSubTypeEnum.ZERO),
 
-    M3T_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M30_OR_M3T_CAMERA, DeviceSubTypeEnum.ZERO),
+    M3T_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M3T_CAMERA, DeviceSubTypeEnum.ZERO),
 
     M3M_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M3M_CAMERA, DeviceSubTypeEnum.ZERO),
 
@@ -76,6 +76,49 @@ public enum DeviceEnum {
     M3D_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M3D_CAMERA, DeviceSubTypeEnum.ZERO),
 
     M3TD_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M3TD_CAMERA, DeviceSubTypeEnum.ZERO),
+
+    // Additional UAV devices
+    M4D(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4D, DeviceSubTypeEnum.ZERO),
+
+    M4TD(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4TD, DeviceSubTypeEnum.ZERO),
+
+    M4E(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4E, DeviceSubTypeEnum.ZERO),
+
+    M4T(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4T, DeviceSubTypeEnum.ZERO),
+
+    // Additional Camera devices
+    PAYLOAD(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.PAYLOAD, DeviceSubTypeEnum.ZERO),
+
+    H30(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.H30, DeviceSubTypeEnum.ZERO),
+
+    H30T(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.H30T, DeviceSubTypeEnum.ZERO),
+
+    L2(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.L2, DeviceSubTypeEnum.ZERO),
+
+    DJI_MINI_3_PRO(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.DJI_MINI_3_PRO, DeviceSubTypeEnum.ZERO),
+
+    DJI_MINI_3(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.DJI_MINI_3, DeviceSubTypeEnum.ZERO),
+
+    M4E_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M4E_CAMERA, DeviceSubTypeEnum.ZERO),
+
+    M4T_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M4T_CAMERA, DeviceSubTypeEnum.ZERO),
+
+    NOT_SUPPORTED_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.NOT_SUPPORTED_CAMERA, DeviceSubTypeEnum.ZERO),
+
+    // Additional Dock devices
+    S22M300(DeviceDomainEnum.DOCK, DeviceTypeEnum.S22M300, DeviceSubTypeEnum.ZERO),
+
+    S2201(DeviceDomainEnum.DOCK, DeviceTypeEnum.S2201, DeviceSubTypeEnum.ZERO),
+
+    S2301(DeviceDomainEnum.DOCK, DeviceTypeEnum.S2301, DeviceSubTypeEnum.ZERO),
+
+    S24M350(DeviceDomainEnum.DOCK, DeviceTypeEnum.S24M350, DeviceSubTypeEnum.ZERO),
+
+    S24M350S(DeviceDomainEnum.DOCK, DeviceTypeEnum.S24M350S, DeviceSubTypeEnum.ZERO),
+
+    S24M3(DeviceDomainEnum.DOCK, DeviceTypeEnum.S24M3, DeviceSubTypeEnum.ZERO),
+
+    S24M4(DeviceDomainEnum.DOCK, DeviceTypeEnum.S24M4, DeviceSubTypeEnum.ZERO),
     ;
 
     @Schema(enumAsRef = true)
