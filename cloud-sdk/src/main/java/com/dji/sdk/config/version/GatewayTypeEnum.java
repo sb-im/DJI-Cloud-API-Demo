@@ -17,6 +17,22 @@ public enum GatewayTypeEnum {
     DOCK(DeviceEnum.DOCK),
 
     DOCK2(DeviceEnum.DOCK2),
+
+    // 各种机场型号
+    S22M300(DeviceEnum.S22M300),
+
+    S2201(DeviceEnum.S2201),
+
+    S2301(DeviceEnum.S2301),
+
+    S24M350(DeviceEnum.S24M350),
+
+    S24M350S(DeviceEnum.S24M350S),
+
+    S24M3(DeviceEnum.S24M3),
+
+    S24M4(DeviceEnum.S24M4),
+
     ;
 
     private final DeviceEnum[] gateway;

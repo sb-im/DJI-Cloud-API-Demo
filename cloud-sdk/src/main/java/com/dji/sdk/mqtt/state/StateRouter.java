@@ -82,6 +82,14 @@ public class StateRouter {
                 return RcStateDataKeyEnum.find(keys).getClassType();
             case DOCK:
             case DOCK2:
+            // 支持所有新的机场类型
+            case S22M300:
+            case S2201:
+            case S2301:
+            case S24M350:
+            case S24M350S:
+            case S24M3:
+            case S24M4:
                 return DockStateDataKeyEnum.find(keys).getClassType();
             default:
                 throw new CloudSDKException(CloudSDKErrorEnum.WRONG_DATA, "Unexpected value: " + SDKManager.getDeviceSDK(gatewaySn).getType());

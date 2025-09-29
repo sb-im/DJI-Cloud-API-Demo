@@ -16,41 +16,41 @@ import java.util.Set;
  */
 public enum PropertySetEnum {
 
-    NIGHT_LIGHTS_STATE("night_lights_state", NightLightsStateSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    NIGHT_LIGHTS_STATE("night_lights_state", NightLightsStateSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    HEIGHT_LIMIT("height_limit", HeightLimitSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    HEIGHT_LIMIT("height_limit", HeightLimitSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    DISTANCE_LIMIT_STATUS("distance_limit_status", DistanceLimitStatusSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    DISTANCE_LIMIT_STATUS("distance_limit_status", DistanceLimitStatusSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    OBSTACLE_AVOIDANCE("obstacle_avoidance", ObstacleAvoidanceSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    OBSTACLE_AVOIDANCE("obstacle_avoidance", ObstacleAvoidanceSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    RTH_ALTITUDE("rth_altitude", RthAltitudeSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    RTH_ALTITUDE("rth_altitude", RthAltitudeSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    OUT_OF_CONTROL_ACTION("rc_lost_action", RcLostActionSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    OUT_OF_CONTROL_ACTION("rc_lost_action", RcLostActionSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    EXIT_WAYLINE_WHEN_RC_LOST("exit_wayline_when_rc_lost", ExitWaylineWhenRcLostSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2), true),
+    EXIT_WAYLINE_WHEN_RC_LOST("exit_wayline_when_rc_lost", ExitWaylineWhenRcLostSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4), true),
 
-    THERMAL_CURRENT_PALETTE_STYLE("thermal_current_palette_style", ThermalCurrentPaletteStyleSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    THERMAL_CURRENT_PALETTE_STYLE("thermal_current_palette_style", ThermalCurrentPaletteStyleSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    THERMAL_GAIN_MODE("thermal_gain_mode", ThermalGainModeSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    THERMAL_GAIN_MODE("thermal_gain_mode", ThermalGainModeSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    THERMAL_ISOTHERM_STATE("thermal_isotherm_state", ThermalIsothermStateSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    THERMAL_ISOTHERM_STATE("thermal_isotherm_state", ThermalIsothermStateSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    THERMAL_ISOTHERM_UPPER_LIMIT("thermal_isotherm_upper_limit", ThermalIsothermUpperLimitSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    THERMAL_ISOTHERM_UPPER_LIMIT("thermal_isotherm_upper_limit", ThermalIsothermUpperLimitSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    THERMAL_ISOTHERM_LOWER_LIMIT("thermal_isotherm_lower_limit", ThermalIsothermLowerLimitSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    THERMAL_ISOTHERM_LOWER_LIMIT("thermal_isotherm_lower_limit", ThermalIsothermLowerLimitSet.class, CloudSDKVersionEnum.V0_0_1, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    RTH_MODE("rth_mode", DockDroneRthMode.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK2)),
+    RTH_MODE("rth_mode", DockDroneRthMode.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK2, GatewayTypeEnum.S2201)),
 
-    USER_EXPERIENCE_IMPROVEMENT("user_experience_improvement", UserExperienceImprovementSet.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    USER_EXPERIENCE_IMPROVEMENT("user_experience_improvement", UserExperienceImprovementSet.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    COMMANDER_MODE_LOST_ACTION("commander_mode_lost_action", DockDroneCommanderModeLostAction.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    COMMANDER_MODE_LOST_ACTION("commander_mode_lost_action", DockDroneCommanderModeLostAction.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    COMMANDER_FLIGHT_HEIGHT("commander_flight_height", DockDroneCommanderFlightHeight.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2)),
+    COMMANDER_FLIGHT_HEIGHT("commander_flight_height", DockDroneCommanderFlightHeight.class, CloudSDKVersionEnum.V1_0_0, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.DOCK2, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2201, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
-    OFFLINE_MAP_ENABLE("offline_map_enable", DockDroneOfflineMapEnable.class, CloudSDKVersionEnum.V1_0_1, Set.of(GatewayTypeEnum.DOCK2)),
+    OFFLINE_MAP_ENABLE("offline_map_enable", DockDroneOfflineMapEnable.class, CloudSDKVersionEnum.V1_0_1, Set.of(GatewayTypeEnum.DOCK2, GatewayTypeEnum.S2201)),
 
-    SILENT_MODE("silent_mode", DockSilentMode.class, CloudSDKVersionEnum.V1_0_2, Set.of(GatewayTypeEnum.DOCK)),
+    SILENT_MODE("silent_mode", DockSilentMode.class, CloudSDKVersionEnum.V1_0_2, Set.of(GatewayTypeEnum.DOCK, GatewayTypeEnum.S22M300, GatewayTypeEnum.S2301, GatewayTypeEnum.S24M350, GatewayTypeEnum.S24M350S, GatewayTypeEnum.S24M3, GatewayTypeEnum.S24M4)),
 
     ;
 
