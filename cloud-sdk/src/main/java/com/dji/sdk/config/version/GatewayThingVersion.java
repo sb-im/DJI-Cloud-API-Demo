@@ -24,6 +24,28 @@ public class GatewayThingVersion {
             case RC:
                 this.thingVersion = RcThingVersionEnum.find(thingVersion);
                 return;
+            // 各种机场型号
+            case S22M300:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S2201:
+                this.thingVersion = Dock2ThingVersionEnum.find(thingVersion);
+                return;
+            case S2301:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S24M350:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S24M350S:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S24M3:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S24M4:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
         }
     }
 
