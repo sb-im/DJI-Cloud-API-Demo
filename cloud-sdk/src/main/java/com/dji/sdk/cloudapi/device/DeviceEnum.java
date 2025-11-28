@@ -80,11 +80,13 @@ public enum DeviceEnum {
     // Additional UAV devices
     M4D(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4D, DeviceSubTypeEnum.ZERO),
 
-    M4TD(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4TD, DeviceSubTypeEnum.ZERO),
+    M4TD(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4D, DeviceSubTypeEnum.ONE),
 
     M4E(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4E, DeviceSubTypeEnum.ZERO),
 
-    M4T(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4T, DeviceSubTypeEnum.ZERO),
+    M4T(DeviceDomainEnum.DRONE, DeviceTypeEnum.M4E, DeviceSubTypeEnum.ONE),
+
+    DJI_MATRICE_400(DeviceDomainEnum.DRONE, DeviceTypeEnum.DJI_MATRICE_400, DeviceSubTypeEnum.ZERO),
 
     // Additional Camera devices
     PAYLOAD(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.PAYLOAD, DeviceSubTypeEnum.ZERO),
@@ -103,6 +105,12 @@ public enum DeviceEnum {
 
     M4T_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M4T_CAMERA, DeviceSubTypeEnum.ZERO),
 
+    M4D_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M4D_CAMERA, DeviceSubTypeEnum.ZERO),
+
+    M4TD_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.M4TD_CAMERA, DeviceSubTypeEnum.ZERO),
+
+    VISION_ASSIST(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.VISION_ASSIST, DeviceSubTypeEnum.ZERO),
+
     NOT_SUPPORTED_CAMERA(DeviceDomainEnum.PAYLOAD, DeviceTypeEnum.NOT_SUPPORTED_CAMERA, DeviceSubTypeEnum.ZERO),
 
     // Additional Dock devices
@@ -119,6 +127,12 @@ public enum DeviceEnum {
     S24M3(DeviceDomainEnum.DOCK, DeviceTypeEnum.S24M3, DeviceSubTypeEnum.ZERO),
 
     S24M4(DeviceDomainEnum.DOCK, DeviceTypeEnum.S24M4, DeviceSubTypeEnum.ZERO),
+
+    S25M4(DeviceDomainEnum.DOCK, DeviceTypeEnum.S25M4, DeviceSubTypeEnum.ZERO),
+
+    S25M400(DeviceDomainEnum.DOCK, DeviceTypeEnum.S25M400, DeviceSubTypeEnum.ZERO),
+
+    S25M400Pro(DeviceDomainEnum.DOCK, DeviceTypeEnum.S25M400Pro, DeviceSubTypeEnum.ZERO),
     ;
 
     @Schema(enumAsRef = true)

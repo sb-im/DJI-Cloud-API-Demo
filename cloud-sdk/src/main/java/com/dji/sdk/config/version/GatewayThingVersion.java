@@ -46,6 +46,15 @@ public class GatewayThingVersion {
             case S24M4:
                 this.thingVersion = DockThingVersionEnum.find(thingVersion);
                 return;
+            case S25M4:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S25M400:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
+            case S25M400Pro:
+                this.thingVersion = DockThingVersionEnum.find(thingVersion);
+                return;
         }
     }
 

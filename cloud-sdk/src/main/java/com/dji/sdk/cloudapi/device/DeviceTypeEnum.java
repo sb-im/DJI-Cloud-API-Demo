@@ -1,9 +1,10 @@
 package com.dji.sdk.cloudapi.device;
 
-import com.dji.sdk.exception.CloudSDKException;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 
@@ -29,6 +30,7 @@ public enum DeviceTypeEnum {
     M4TD(100), // Note: same type as M4D, differentiated by sub_type
     M4E(99),
     M4T(99), // Note: same type as M4E, differentiated by sub_type
+    DJI_MATRICE_400(103),
 
     // Camera devices (domain 1)
     Z30(20),
@@ -52,11 +54,14 @@ public enum DeviceTypeEnum {
     M3M_CAMERA(68),
     DJI_MINI_3(76),
     M3D_CAMERA(80),
+    M3TD_CAMERA(81),
     M4E_CAMERA(88),
     M4T_CAMERA(89),
+    M4D_CAMERA(90),
+    M4TD_CAMERA(91),
+    VISION_ASSIST(176), // 辅助影像相机
     NOT_SUPPORTED_CAMERA(65535),
     P1(100000),
-    M3TD_CAMERA(81),
 
     // RC devices (domain 2)
     RC(56),
@@ -73,7 +78,15 @@ public enum DeviceTypeEnum {
     S24M350S(88101),
     S24M3(88102),
     S24M4(88103),
+    S25M4(88104), // M4-25 (renamed from S24M4S based on type.json)
+    S25M400(88105), // M400充电
+    S25M400Pro(88106), // M400Pro换电
+
+    // Unknown device type fallback
+    UNKNOWN(-1),
     ;
+
+    private static final Logger log = LoggerFactory.getLogger(DeviceTypeEnum.class);
 
     private final int type;
 
@@ -88,7 +101,17 @@ public enum DeviceTypeEnum {
 
     @JsonCreator
     public static DeviceTypeEnum find(int type) {
-        return Arrays.stream(values()).filter(typeEnum -> typeEnum.type == type).findAny()
-                .orElseThrow(() -> new CloudSDKException(DeviceTypeEnum.class, type));
+        DeviceTypeEnum result = Arrays.stream(values())
+                .filter(typeEnum -> typeEnum.type == type)
+                .findAny()
+                .orElse(null);
+
+        if (result == null) {
+            // Log warning for unknown device type but don't throw exception
+            log.warn("Unknown device type encountered: {}. Using UNKNOWN fallback.", type);
+            return UNKNOWN;
+        }
+
+        return result;
     }
 }

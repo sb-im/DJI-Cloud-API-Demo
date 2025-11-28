@@ -1,6 +1,5 @@
 package com.dji.sdk.cloudapi.device;
 
-import com.dji.sdk.exception.CloudSDKException;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -13,13 +12,53 @@ import java.util.Arrays;
  */
 public enum PayloadPositionEnum {
 
-    FRONT_LEFT(0),
+    LEFT_OR_MAIN(0),
 
-    FRONT_RIGHT(1),
+    RIGHT(1),
 
-    TOP(2),
+    UP(2),
 
-    FPV(7);
+    INDEX_3(3),
+
+    UP_TYPE_C(4),
+
+    UP_TYPE_C_EXT_ONE(5),
+
+    INDEX_6(6),
+
+    FPV(7),
+
+    INDEX_8(8),
+
+    INDEX_9(9),
+
+    INDEX_10(10),
+
+    INDEX_11(11),
+
+    INDEX_12(12),
+
+    AGGREGATION(65534),
+
+    VISION_ASSIST(10000),
+
+    PORT_1(20001),
+
+    PORT_2(20002),
+
+    PORT_3(20003),
+
+    PORT_4(20004),
+
+    PORT_5(20005),
+
+    PORT_6(20006),
+
+    PORT_7(20007),
+
+    PORT_8(20008),
+
+    UNKNOWN(65535);
 
     private final int position;
 
@@ -35,6 +74,6 @@ public enum PayloadPositionEnum {
     @JsonCreator
     public static PayloadPositionEnum find(int position) {
         return Arrays.stream(values()).filter(positionEnum -> positionEnum.position == position).findAny()
-                .orElseThrow(() -> new CloudSDKException(PayloadPositionEnum.class, position));
+                .orElse(UNKNOWN);
     }
 }

@@ -33,6 +33,12 @@ public enum GatewayTypeEnum {
 
     S24M4(DeviceEnum.S24M4),
 
+    S25M4(DeviceEnum.S25M4),
+
+    S25M400(DeviceEnum.S25M400),
+
+    S25M400Pro(DeviceEnum.S25M400Pro),
+
     ;
 
     private final DeviceEnum[] gateway;

@@ -36,4 +36,5 @@ build/
 /mvnw.cmd
 /logs/
 /src/test/
+/src/main/resources/
 *.class
