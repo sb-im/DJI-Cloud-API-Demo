@@ -90,6 +90,9 @@ public class StateRouter {
             case S24M350S:
             case S24M3:
             case S24M4:
+            case S25M4:
+            case S25M400:
+            case S25M400Pro:
                 return DockStateDataKeyEnum.find(keys).getClassType();
             default:
                 throw new CloudSDKException(CloudSDKErrorEnum.WRONG_DATA, "Unexpected value: " + SDKManager.getDeviceSDK(gatewaySn).getType());

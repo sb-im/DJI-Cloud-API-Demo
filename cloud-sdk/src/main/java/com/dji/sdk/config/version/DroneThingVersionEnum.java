@@ -25,6 +25,8 @@ public enum DroneThingVersionEnum implements IThingVersion {
 
     V1_2_0("1.2.0", CloudSDKVersionEnum.V1_0_3),
 
+    V1_3_2("1.3.2", CloudSDKVersionEnum.V1_3_2),
+
     // 添加对新版本的支持
     V2_1_2("2.1.2", CloudSDKVersionEnum.V1_0_3),
 
